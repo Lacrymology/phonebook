@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for entry in entries %}
+<div class="phonebook-entry">
+  <div class="phonebook-name">
+    {{ entry.last_name }}, {{ entry.first_name }}
+  </div>
+  <div class="phonebook-data">
+    <div class="phonebook-number">
+      {{ entry.phone_number }}
+    </div>
+    <div class="phonebook_address">
+      {{ entry.address.street }}
+      <br />
+      {{ entry.address.city }}
+      <br />
+      {{ entry.address.country }}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
