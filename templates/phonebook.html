@@ -1,7 +1,4 @@
-{% extends "base.html" %}
-
-{% block content %}
-{% for entry in entries %}
+{% for entry in entry_list %}
 <div class="phonebook-entry">
   <div class="phonebook-name">
     {{ entry.last_name }}, {{ entry.first_name }}
@@ -20,4 +17,3 @@
   </div>
 </div>
 {% endfor %}
-{% endblock %}
